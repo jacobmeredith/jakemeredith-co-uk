@@ -5,10 +5,10 @@
   "license": "",
   "sideEffects": false,
   "scripts": {
-    "postinstall": "remix setup cloudflare-pages",
+    "postinstall": "patch-package && remix setup cloudflare-pages",
     "build:remix": "cross-env NODE_ENV=production remix build",
     "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
-    "build": "npm run build:remix && npm run build:css",
+    "build": "npm run build:css && npm run build:remix",
     "dev:remix": "cross-env NODE_ENV=development remix watch",
     "dev:wrangler": "cross-env NODE_ENV=development wrangler pages dev ./public",
     "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
@@ -18,6 +18,7 @@
   "dependencies": {
     "@remix-run/cloudflare-pages": "^1.2.3",
     "@remix-run/react": "^1.2.3",
+    "patch-package": "^6.4.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "remix": "^1.2.3"
