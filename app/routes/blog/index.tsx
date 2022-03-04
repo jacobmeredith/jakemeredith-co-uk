@@ -1,36 +1,35 @@
 import * as React from "react";
 
-import { Link, LoaderFunction, MetaFunction, json, useLoaderData } from "remix";
+import { Link, LoaderFunction, MetaFunction, useLoaderData } from "remix";
 
-import { allPosts } from "~/helpers/posts";
+import { allPosts } from "~/utils/posts";
 
 export const meta: MetaFunction = () => {
   return { title: "Blog | jakemeredith.co.uk" };
 };
 
-export const loader: LoaderFunction = async () => {
-  return json({
-    posts: allPosts.reduce((acc: any, post: any) => {
-      if (!acc[post.category]) {
-        acc[post.category] = [];
-      }
-      acc[post.category].push(post);
+export const loader: LoaderFunction = async ({ request }) => {
+  let url = new URL(request.url);
+  let category = url.searchParams.get("c");
+  let categoryArray = category?.split(",");
 
-      return acc;
-    }, []),
-  });
+  return {
+    posts: category
+      ? allPosts.filter((post) =>
+          categoryArray?.includes(post.category.toLowerCase())
+        )
+      : allPosts,
+  };
 };
 
-export default function Index() {
+export default function Blog() {
   const { posts } = useLoaderData();
 
-  return (
-    <div>
-      {posts.map((category: any) => (
-        <Link key={category} to={category.toLowerCase()}>
-          {category}
-        </Link>
-      ))}
+  const postsMap = posts.map((post: any) => (
+    <div key={post.slug}>
+      <Link to={`/blog/${post.slug}`}>{post.title}</Link>
     </div>
-  );
+  ));
+
+  return <div>{postsMap}</div>;
 }
