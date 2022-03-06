@@ -14,12 +14,9 @@ export const RecentPosts: React.FC<IRecentPostsProps> = ({ posts, title }) => {
       {title && (
         <h3 className="text-2xl leading-relaxed text-gray-200">{title}</h3>
       )}
-      <ul className="flex flex-wrap mt-6">
+      <ul className="grid grid-cols-1 gap-8 mt-6 md:grid-cols-3">
         {posts.map((post: IPost) => (
-          <li
-            className="w-full mb-6 md:w-1/3 md:first:pr-6 md:last:pl-6 md:mb-0"
-            key={post.slug}
-          >
+          <li key={post.slug}>
             <Link
               to={"/blog/" + post.slug}
               className="relative flex w-full overflow-hidden bg-white rounded-md md:h-96 h-72"

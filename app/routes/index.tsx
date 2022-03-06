@@ -2,8 +2,8 @@ import * as React from "react";
 
 import { LoaderFunction, MetaFunction, useLoaderData } from "remix";
 
-import { RecentPosts } from "~/components/RecentPosts";
-import { takeLatestPosts } from "~/utils/posts";
+import { RecentPosts } from "~/components/Posts/RecentPosts";
+import { getLatestPosts } from "~/utils/posts";
 
 export const meta: MetaFunction = () => {
   return { title: "Home | jakemeredith.co.uk" };
@@ -11,7 +11,7 @@ export const meta: MetaFunction = () => {
 
 export const loader: LoaderFunction = async ({ request }) => {
   return {
-    recentPosts: takeLatestPosts(),
+    recentPosts: getLatestPosts(),
   };
 };
 

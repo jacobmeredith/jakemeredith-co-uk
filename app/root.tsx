@@ -7,8 +7,8 @@ import {
   ScrollRestoration,
 } from "remix";
 
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
+import { Footer } from "./components/Common/Footer";
+import { Header } from "./components/Common/Header";
 import styles from "./styles/app.css";
 
 export function links() {

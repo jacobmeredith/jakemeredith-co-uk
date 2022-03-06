@@ -29,7 +29,11 @@ export const Header = () => {
           <ul className="flex flex-col w-full md:flex-row">
             {mainPages.map((link) => (
               <li key={link.text} className="flex items-center ml-8 text-lg">
-                <Link className="py-3 text-white md:py-0" to={link.to}>
+                <Link
+                  className="py-3 text-white md:py-0"
+                  to={link.to}
+                  onClick={() => setIsOpen(false)}
+                >
                   {link.text}
                 </Link>
               </li>
