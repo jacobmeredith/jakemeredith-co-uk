@@ -10,18 +10,19 @@ interface IRecentPostsProps {
 
 export const RecentPosts: React.FC<IRecentPostsProps> = ({ posts, title }) => {
   return (
-    <section className="container py-12 mx-auto">
+    <section className="container p-8 mx-auto md:py-12 md:px-0">
       {title && (
-        <h3 className="w-1/2 text-2xl leading-relaxed text-gray-200">
-          {title}
-        </h3>
+        <h3 className="text-2xl leading-relaxed text-gray-200">{title}</h3>
       )}
       <ul className="flex flex-wrap mt-6">
         {posts.map((post: IPost) => (
-          <li className="w-1/3 first:pr-6 last:pl-6" key={post.slug}>
+          <li
+            className="w-full mb-6 md:w-1/3 md:first:pr-6 md:last:pl-6 md:mb-0"
+            key={post.slug}
+          >
             <Link
               to={"/blog/" + post.slug}
-              className="relative flex w-full overflow-hidden bg-white rounded-md h-96"
+              className="relative flex w-full overflow-hidden bg-white rounded-md md:h-96 h-72"
             >
               <img
                 className="absolute inset-0 z-0 object-cover w-full h-full"

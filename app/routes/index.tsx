@@ -20,8 +20,8 @@ export default function Index() {
 
   return (
     <React.Fragment>
-      <header className="container py-24 mx-auto">
-        <h2 className="w-1/2 text-4xl leading-relaxed text-gray-100">
+      <header className="container px-8 py-12 mx-auto md:py-24 md:px-0">
+        <h2 className="w-full text-2xl leading-relaxed text-gray-100 md:w-1/2 md:text-4xl">
           Hi I'm Jake, I'm a software engineer from the UK that works with
           javascript/typescript.
         </h2>

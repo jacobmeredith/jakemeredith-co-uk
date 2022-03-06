@@ -8,8 +8,8 @@ import { mainPages } from "~/utils/pages";
 
 export const Footer = () => {
   return (
-    <div className="container flex py-12 mx-auto">
-      <div className="flex flex-col w-1/2">
+    <div className="container flex flex-col p-8 mx-auto md:py-12 md:flex-row md:px-0">
+      <div className="flex flex-col w-full md:w-1/2">
         <Link className="mb-6 text-xl text-gray-50" to="/">
           Jake Meredith
         </Link>
