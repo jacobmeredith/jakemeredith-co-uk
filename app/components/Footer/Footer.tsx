@@ -8,7 +8,7 @@ import { mainPages } from "~/utils/pages";
 
 export const Footer = () => {
   return (
-    <div className="container flex py-6 mx-auto">
+    <div className="container flex py-12 mx-auto">
       <div className="flex flex-col w-1/2">
         <Link className="mb-6 text-xl text-gray-50" to="/">
           Jake Meredith
