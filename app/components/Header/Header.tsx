@@ -13,7 +13,7 @@ export const Header = () => {
         <nav className="flex ml-auto">
           <ul className="flex">
             {mainPages.map((link) => (
-              <li key={link.text} className="flex items-center ml-8">
+              <li key={link.text} className="flex items-center ml-8 text-lg">
                 <Link className="text-white" to={link.to}>
                   {link.text}
                 </Link>
