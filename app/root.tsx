@@ -7,6 +7,8 @@ import {
   ScrollRestoration,
 } from "remix";
 
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
 import styles from "./styles/app.css";
 
 export function links() {
@@ -22,8 +24,10 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-gray-800">
+        <Header />
         <Outlet />
+        <Footer />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
