@@ -1,6 +1,7 @@
 import * as post from "../routes/blog/post.mdx";
 import * as post2 from "../routes/blog/post2.mdx";
 import * as post3 from "../routes/blog/post3.mdx";
+import * as post4 from "../routes/blog/post4.mdx";
 
 import { parseISO } from "date-fns";
 
@@ -30,7 +31,7 @@ export const allPosts: IPost[] = [
   postFromModule(post),
   postFromModule(post2),
   postFromModule(post3),
-  postFromModule(post),
+  postFromModule(post4),
 ];
 
 export const getLatestPosts = (n: number = 3, skip: number = 0) => {
