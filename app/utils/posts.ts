@@ -25,6 +25,7 @@ export const allPosts: IPost[] = [
   postFromModule(post2),
   postFromModule(post3),
 ];
+
 export const takeLatestPosts = (n: number = 3, skip: number = 0) => {
   return allPosts
     .sort(
