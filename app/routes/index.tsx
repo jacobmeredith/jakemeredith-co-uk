@@ -11,7 +11,7 @@ export const meta: MetaFunction = () => {
 
 export const loader: LoaderFunction = async ({ request }) => {
   return {
-    recentPosts: getLatestPosts(),
+    recentPosts: getLatestPosts(4),
   };
 };
 

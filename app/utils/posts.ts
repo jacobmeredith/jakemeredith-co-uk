@@ -9,6 +9,7 @@ export interface IPost {
   slug: string;
   title: string;
   category: string;
+  image: string;
   createdDate: string;
   updatedDate: string;
 }
