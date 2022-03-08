@@ -23,11 +23,11 @@ export default function Index() {
       <header className="container px-8 py-12 mx-auto md:py-24 md:px-0">
         <h2 className="flex flex-col items-start w-full leading-relaxed text-gray-100 md:w-1/2">
           <span className="text-2xl md:text-4xl">Hi, my name is</span>
-          <span className="p-2 mt-8 text-4xl bg-gray-700 rounded-md md:text-6xl">
+          <span className="p-2 mt-6 text-4xl bg-gray-700 rounded-md md:mt-8 md:text-6xl">
             Jake Meredith.
           </span>
-          <span className="mt-8 text-2xl md:text-4xl">
-            I build and write about software engineering
+          <span className="mt-6 text-2xl md:mt-8 md:text-4xl">
+            I build and break things on the web.
           </span>
         </h2>
       </header>
