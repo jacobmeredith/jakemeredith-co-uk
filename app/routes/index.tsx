@@ -21,8 +21,14 @@ export default function Index() {
   return (
     <React.Fragment>
       <header className="container px-8 py-12 mx-auto md:py-24 md:px-0">
-        <h2 className="w-full text-2xl leading-relaxed text-gray-100 md:w-1/2 md:text-4xl">
-          Hi I'm Jake, and I am a selft taught software engineer from the UK
+        <h2 className="flex flex-col items-start w-full leading-relaxed text-gray-100 md:w-1/2">
+          <span className="text-4xl">Hi, my name is</span>
+          <span className="p-2 mt-8 text-6xl bg-gray-700 rounded-md">
+            Jake Meredith.
+          </span>
+          <span className="mt-8 text-4xl">
+            I build and write about software engineering
+          </span>
         </h2>
       </header>
       <RecentPosts title="Recent articles" posts={recentPosts} />

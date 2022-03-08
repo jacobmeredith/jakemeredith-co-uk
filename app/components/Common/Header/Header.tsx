@@ -12,7 +12,7 @@ export const Header = () => {
     <header className="py-8 md:px-0">
       <div className="container flex flex-wrap items-center mx-auto">
         <Link className="pl-8 text-2xl text-white md:pl-0" to="/">
-          Jake Meredith
+          Jake Meredith.
         </Link>
         <button
           className="block ml-auto mr-8 text-2xl text-white md:hidden"
