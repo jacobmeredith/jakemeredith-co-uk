@@ -22,11 +22,11 @@ export default function Index() {
     <React.Fragment>
       <header className="container px-8 py-12 mx-auto md:py-24 md:px-0">
         <h2 className="flex flex-col items-start w-full leading-relaxed text-gray-100 md:w-1/2">
-          <span className="text-4xl">Hi, my name is</span>
-          <span className="p-2 mt-8 text-6xl bg-gray-700 rounded-md">
+          <span className="text-2xl md:text-4xl">Hi, my name is</span>
+          <span className="p-2 mt-8 text-4xl bg-gray-700 rounded-md md:text-6xl">
             Jake Meredith.
           </span>
-          <span className="mt-8 text-4xl">
+          <span className="mt-8 text-2xl md:text-4xl">
             I build and write about software engineering
           </span>
         </h2>
