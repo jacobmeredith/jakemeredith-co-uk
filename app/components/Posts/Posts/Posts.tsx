@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { IPost } from "~/utils/posts";
+import { Preview } from "../Preview";
 
 interface IPostsProps {
   posts: IPost[];
@@ -8,9 +9,8 @@ interface IPostsProps {
 
 export const Posts: React.FC<IPostsProps> = ({ posts }) => {
   const postsMap = posts.map((post: IPost, index: number) => (
-    <div key={post.slug} className="flex flex-col">
-      <img className="mb-4 rounded-md" src={post.image} alt="article" />
-      <h3 className="text-2xl text-gray-200">{post.title}</h3>
+    <div key={post.slug}>
+      <Preview {...post} />
     </div>
   ));
 
