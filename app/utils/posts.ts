@@ -3,6 +3,7 @@ import * as post2 from "../routes/blog/post2.mdx";
 import * as post3 from "../routes/blog/post3.mdx";
 import * as post4 from "../routes/blog/post4.mdx";
 
+import { getPropertiesFromFile } from "./mdx";
 import { parseISO } from "date-fns";
 
 export interface IPost {
@@ -20,19 +21,12 @@ export interface ICategory {
   active: boolean;
 }
 
-export const postFromModule = (mod: any): IPost => {
-  return {
-    slug: mod.filename.replace(/\.mdx?$/, ""),
-    ...mod.attributes,
-  };
-};
-
 // Make sure to add each post to this list, need to come up with a better way to do this
 export const allPosts: IPost[] = [
-  postFromModule(post),
-  postFromModule(post2),
-  postFromModule(post3),
-  postFromModule(post4),
+  getPropertiesFromFile(post),
+  getPropertiesFromFile(post2),
+  getPropertiesFromFile(post3),
+  getPropertiesFromFile(post4),
 ];
 
 export const getLatestPosts = (n: number = 3, skip: number = 0) => {

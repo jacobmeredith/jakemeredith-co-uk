@@ -11,7 +11,7 @@ interface IRecentPostsProps {
 
 export const RecentPosts: React.FC<IRecentPostsProps> = ({ posts, title }) => {
   return (
-    <section className="container p-8 mx-auto md:py-12 md:px-0">
+    <section className="container px-8 py-16 mx-auto md:py-24 md:px-0">
       {title && (
         <h3 className="text-2xl leading-relaxed text-gray-200">{title}</h3>
       )}

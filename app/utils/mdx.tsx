@@ -7,3 +7,10 @@ export const Layout: React.FC = ({ children }) => {
     </main>
   );
 };
+
+export function getPropertiesFromFile<ReturnType>(mod: any): ReturnType {
+  return {
+    slug: mod.filename.replace(/\.mdx?$/, ""),
+    ...mod.attributes,
+  };
+}
