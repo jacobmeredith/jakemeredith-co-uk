@@ -15,7 +15,7 @@ export const RecentPosts: React.FC<IRecentPostsProps> = ({ posts, title }) => {
       {title && (
         <h3 className="text-2xl leading-relaxed text-gray-200">{title}</h3>
       )}
-      <ul className="grid grid-cols-2 gap-8 mt-6 md:grid-cols-4">
+      <ul className="grid grid-cols-1 gap-8 mt-6 md:grid-cols-4">
         {posts.map((post: IPost) => (
           <li key={post.slug}>
             <Preview {...post} />
