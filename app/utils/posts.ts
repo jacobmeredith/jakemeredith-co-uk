@@ -4,7 +4,7 @@ import * as post3 from "../routes/blog/post3.mdx";
 import * as post4 from "../routes/blog/post4.mdx";
 
 import { getPropertiesFromFile } from "./mdx";
-import { sortByLatests } from ".";
+import { sortByLatest } from ".";
 
 export interface IPost {
   slug: string;
@@ -30,7 +30,7 @@ export const allPosts: IPost[] = [
 ];
 
 export const getLatestPosts = (n: number = 3, skip: number = 0) => {
-  return allPosts.sort(sortByLatests).slice(skip, n);
+  return allPosts.sort(sortByLatest).slice(skip, n);
 };
 
 export const getCategories = (categoryArray: string[]): ICategory[] => {

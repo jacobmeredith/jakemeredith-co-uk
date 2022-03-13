@@ -1,6 +1,6 @@
 import { parseISO } from "date-fns";
 
-export function sortByLatests(
+export function sortByLatest(
   a: { createdDate: string },
   b: { createdDate: string }
 ) {
