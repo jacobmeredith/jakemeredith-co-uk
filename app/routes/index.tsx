@@ -2,10 +2,10 @@ import * as React from "react";
 
 import { LoaderFunction, MetaFunction, useLoaderData } from "remix";
 
-import { Preview } from "~/components/Projects/Preview";
 import { RecentPosts } from "~/components/Posts/RecentPosts";
-import { allProjects } from "~/utils/projects";
+import { RecentProjects } from "~/components/Projects/RecentProjects";
 import { getLatestPosts } from "~/utils/posts";
+import { getLatestProjects } from "~/utils/projects";
 
 export const meta: MetaFunction = () => {
   return { title: "Home | jakemeredith.co.uk" };
@@ -14,11 +14,12 @@ export const meta: MetaFunction = () => {
 export const loader: LoaderFunction = async ({ request }) => {
   return {
     recentPosts: getLatestPosts(4),
+    recentProjects: getLatestProjects(3),
   };
 };
 
 export default function Index() {
-  const { recentPosts } = useLoaderData();
+  const { recentPosts, recentProjects } = useLoaderData();
 
   return (
     <React.Fragment>
@@ -34,11 +35,7 @@ export default function Index() {
         </h2>
       </header>
       <RecentPosts title="Recent articles" posts={recentPosts} />
-      <section className="container py-16 mx-auto md:py-24">
-        <h2 className="mb-12 text-3xl text-center text-white">Projects</h2>
-        <Preview {...allProjects[0]} />
-        <Preview {...allProjects[0]} />
-      </section>
+      <RecentProjects title="Projects" projects={recentProjects} />
     </React.Fragment>
   );
 }

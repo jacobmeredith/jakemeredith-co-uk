@@ -7,7 +7,7 @@ export const Preview: React.FC<IPost> = ({ slug, image, title, category }) => {
   return (
     <Link
       to={"/blog/" + slug}
-      className="relative flex w-full overflow-hidden bg-white rounded-md md:h-96 h-72"
+      className="relative flex w-full overflow-hidden bg-white rounded-md shadow-md md:h-96 h-72 shadow-gray-900"
     >
       <img
         className="absolute inset-0 z-0 object-cover w-full h-full"
