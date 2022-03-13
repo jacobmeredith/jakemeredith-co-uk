@@ -13,8 +13,10 @@ export const RecentProjects: React.FC<IRecentProjectsProps> = ({
   projects,
 }) => {
   return (
-    <section className="container py-16 mx-auto md:py-24">
-      <h2 className="mb-6 mb-12 text-3xl text-center text-white">{title}</h2>
+    <section className="container px-8 py-16 mx-auto md:py-24 md:px-0">
+      <h2 className="mb-8 text-3xl text-white md:mb-24 md:text-center">
+        {title}
+      </h2>
       {projects.map((project) => (
         <Preview key={project.slug} {...project} />
       ))}
