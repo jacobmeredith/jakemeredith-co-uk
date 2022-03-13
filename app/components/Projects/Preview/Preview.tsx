@@ -11,7 +11,7 @@ export const Preview: React.FC<IProject> = ({
   gallery,
 }) => {
   return (
-    <div className="flex flex-col items-center mx-auto mb-8 md:w-8/12 md:flex-row">
+    <div className="flex flex-col items-center mx-auto mb-8 md:mb-24 md:w-8/12 md:flex-row last:mb-0">
       <div className="flex flex-col md:w-2/5 ">
         <img
           src={image}
