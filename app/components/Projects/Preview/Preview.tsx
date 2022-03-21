@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Link } from "remix";
 
 import { IProject } from "~/utils/projects";
+import { Link } from "remix";
 
 export const Preview: React.FC<IProject> = ({
   slug,
@@ -18,16 +18,6 @@ export const Preview: React.FC<IProject> = ({
           alt=""
           className="rounded-md shadow-md shadow-gray-900 md:h-72"
         />
-        <div className="hidden grid-cols-4 gap-4 mt-4 md:grid">
-          {gallery.map((image, index) => (
-            <img
-              key={`${title}_${index}`}
-              src={image}
-              alt=""
-              className="rounded-md shadow-md shadow-gray-900"
-            />
-          ))}
-        </div>
       </div>
       <div className="flex flex-col items-start justify-center w-full p-6 mt-4 bg-gray-900 rounded-md shadow-md md:mt-0 md:ml-8 md:w-3/5 shadow-gray-900 md:h-72">
         <h3 className="text-2xl text-white">{title}</h3>
