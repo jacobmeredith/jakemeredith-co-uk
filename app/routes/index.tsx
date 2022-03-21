@@ -11,9 +11,9 @@ export const meta: MetaFunction = () => {
   return { title: "Home | jakemeredith.co.uk" };
 };
 
-export const loader: LoaderFunction = async ({ request }) => {
+export const loader: LoaderFunction = async () => {
   return {
-    recentPosts: getLatestPosts(4),
+    recentPosts: getLatestPosts(8),
     recentProjects: getLatestProjects(3),
   };
 };
@@ -34,8 +34,12 @@ export default function Index() {
           </span>
         </h2>
       </header>
-      <RecentPosts title="Recent articles" posts={recentPosts} />
-      <RecentProjects title="Projects" projects={recentProjects} />
+      {recentPosts && (
+        <RecentPosts title="Recent articles" posts={recentPosts} />
+      )}
+      {recentProjects && (
+        <RecentProjects title="Projects" projects={recentProjects} />
+      )}
     </React.Fragment>
   );
 }

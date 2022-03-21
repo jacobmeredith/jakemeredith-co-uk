@@ -1,6 +1,39 @@
-# Welcome to Remix!
+# Personal website
 
-- [Remix Docs](https://remix.run/docs)
+## MDX meta format
+
+### Project
+
+```
+---
+title: My interesting project
+description: This is a project that I am working on.
+image: https://picsum.photos/500
+gallery:
+  - https://picsum.photos/250
+  - https://picsum.photos/250
+  - https://picsum.photos/250
+  - https://picsum.photos/250
+createdDate: 2022-03-06T13:16:04Z
+updatedDate: 2022-03-06T13:16:04Z
+meta:
+  title: My First Project | jakemeredith.co.uk
+---
+```
+
+### Blog post
+
+```
+---
+title: My general post
+category: General
+image: https://picsum.photos/500
+createdDate: 2022-03-06T13:16:04Z
+updatedDate: 2022-03-06T13:16:04Z
+meta:
+title: My First Post | jakemeredith.co.uk
+---
+```
 
 ## Development
 
