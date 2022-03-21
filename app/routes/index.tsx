@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { LoaderFunction, MetaFunction, useLoaderData } from "remix";
 
+import { AboutPreview } from "~/components/About/AboutPreview";
 import { RecentPosts } from "~/components/Posts/RecentPosts";
 import { RecentProjects } from "~/components/Projects/RecentProjects";
 import { getLatestPosts } from "~/utils/posts";
@@ -34,6 +35,7 @@ export default function Index() {
           </span>
         </h2>
       </header>
+      <AboutPreview />
       {recentPosts.length > 0 && (
         <RecentPosts title="Recent articles" posts={recentPosts} />
       )}
