@@ -1,6 +1,3 @@
-import * as project from "../routes/projects/project.mdx";
-
-import { getPropertiesFromFile } from "./mdx";
 import { sortByLatest } from ".";
 
 export interface IProject {
@@ -13,7 +10,7 @@ export interface IProject {
   updatedDate: string;
 }
 
-export const allProjects: IProject[] = [getPropertiesFromFile(project)];
+export const allProjects: IProject[] = [];
 
 export const getLatestProjects = (n: number = 3, skip: number = 0) => {
   return allProjects.sort(sortByLatest).slice(skip, n);

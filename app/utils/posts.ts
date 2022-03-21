@@ -1,7 +1,4 @@
 import * as post from "../routes/blog/post.mdx";
-import * as post2 from "../routes/blog/post2.mdx";
-import * as post3 from "../routes/blog/post3.mdx";
-import * as post4 from "../routes/blog/post4.mdx";
 
 import { getPropertiesFromFile } from "./mdx";
 import { sortByLatest } from ".";
@@ -22,12 +19,7 @@ export interface ICategory {
 }
 
 // Make sure to add each post to this list, need to come up with a better way to do this
-export const allPosts: IPost[] = [
-  getPropertiesFromFile(post),
-  getPropertiesFromFile(post2),
-  getPropertiesFromFile(post3),
-  getPropertiesFromFile(post4),
-];
+export const allPosts: IPost[] = [getPropertiesFromFile(post)];
 
 export const getLatestPosts = (n: number = 3, skip: number = 0) => {
   return allPosts.sort(sortByLatest).slice(skip, n);

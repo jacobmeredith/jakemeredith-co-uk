@@ -34,10 +34,10 @@ export default function Index() {
           </span>
         </h2>
       </header>
-      {recentPosts && (
+      {recentPosts.length > 0 && (
         <RecentPosts title="Recent articles" posts={recentPosts} />
       )}
-      {recentProjects && (
+      {recentProjects.length > 0 && (
         <RecentProjects title="Projects" projects={recentProjects} />
       )}
     </React.Fragment>
