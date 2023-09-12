@@ -1,0 +1,8 @@
+body {
+  background-color: rgb(51 65 85);
+  color: white;
+}
+
+.post-content p {
+  margin-bottom: 2em;
+}
