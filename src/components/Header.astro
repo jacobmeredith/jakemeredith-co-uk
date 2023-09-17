@@ -1,15 +1,13 @@
 ---
-import HeaderLink from './HeaderLink.astro';
+//import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
 <header class="bg-slate-800 p-4">
-	<nav class="container mx-auto flex justify-between">
+	<nav class="w-[860px] mx-auto flex justify-between">
 		<h2 class="mr-4 font-bold text-white"><a href="/">{SITE_TITLE}</a></h2>
 		<div class="">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+      <!--<HeaderLink href="/">Home</HeaderLink>-->
 		</div>
 	</nav>
 </header>
