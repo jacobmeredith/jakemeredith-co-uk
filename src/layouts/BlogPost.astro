@@ -18,9 +18,9 @@ const { title, description, pubDate, updatedDate } = Astro.props;
 		<Header />
 		<main class="py-8 w-[860px] mx-auto">
 			<article class="flex flex-col">
-        <div class="w-full mb-2">
+        <div class="w-full mb-4 border-b pb-4">
           <h1 class="text-2xl">{title}</h1>
-          <p class="text-sm">
+          <p class="text-sm mb-2">
             <FormattedDate date={pubDate} />
             {
               updatedDate && (
@@ -30,6 +30,7 @@ const { title, description, pubDate, updatedDate } = Astro.props;
               )
             }
           </p>
+          <p>TL;DR: {description}</p>
         </div>
         <div class="post-content">
           <slot />
